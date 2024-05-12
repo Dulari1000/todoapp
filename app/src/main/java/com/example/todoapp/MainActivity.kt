@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), OnDialogCloseListener {
         fab = findViewById(R.id.fab)
         myDB = DataBaseHelper(this)
         mList = ArrayList()
-        adapter = ToDoAdapter(myDB, this,)
+        adapter = ToDoAdapter(myDB, activity = this)
 
         mRecyclerview.setHasFixedSize(true)
         mRecyclerview.layoutManager = LinearLayoutManager(this)
@@ -52,4 +52,6 @@ class MainActivity : AppCompatActivity(), OnDialogCloseListener {
         adapter.setTasks(mList)
         adapter.notifyDataSetChanged()
     }
+
+
 }

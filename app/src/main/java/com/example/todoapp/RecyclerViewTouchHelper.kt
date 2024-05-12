@@ -1,6 +1,5 @@
 package com.example.todoapp
 
-import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import androidx.appcompat.app.AlertDialog
@@ -25,6 +24,7 @@ class RecyclerViewTouchHelper(private val adapter: ToDoAdapter) : ItemTouchHelpe
             builder.setMessage("Are You Sure ?")
             builder.setPositiveButton("Yes") { dialog, which ->
                 adapter.deletTask(position)
+
             }
             builder.setNegativeButton("Cancel") { dialog, which ->
                 adapter.notifyItemChanged(position)

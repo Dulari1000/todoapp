@@ -15,10 +15,13 @@ import com.example.todoapp.Utils.DataBaseHelper
 
 class ToDoAdapter(
     private val myDB: DataBaseHelper,
-    private val activity: MainActivity,
-    val context: Context
+    private val activity: MainActivity
 ) : RecyclerView.Adapter<ToDoAdapter.MyViewHolder>() {
 
+    val context: Context
+        get() {
+            TODO()
+        }
     private var mList: List<ToDoModel> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
